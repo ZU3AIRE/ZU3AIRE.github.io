@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insane CLock</title>
+    <meta name="description" content="Insane Clock">
+    <meta name="keywords" content="Insane, CLock, creative clocks , english clock ,formal clocks">
+    <meta name="author" content="John Doe">
+
+    <link rel="icon" type="icon/image" href="icon.png" />
+
+    <style>
+        @font-face {
+            font-family: "RalewayL";
+            src: url("Raleway-ExtraLight.ttf");
+        }
+
+        @font-face {
+            font-family: "RalewaySB";
+            src: url("./Raleway-SemiBold.ttf");
+        }
+
+        * {
+            padding: 0px;
+            margin: 0px;
+            user-select: none;
+            /* color: #532253b2 !important; */
+        }
+
+        body {
+            background-color: #eecbff3b;
+            background-image: url(background.svg);
+        }
+
+        h1 {
+            margin: 1em 0px;
+            font-family: "RalewayL";
+            display: inline-block;
+            font-weight: 300;
+            margin: 0px;
+        }
+
+        h1:nth-child(3) {
+            opacity: 0.3;
+        }
+
+        h1:nth-child(6) {
+            opacity: 0.3;
+        }
+
+        h1:nth-child(5) {
+            opacity: 0.3;
+        }
+
+        .title {
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 5px;
+            backdrop-filter: blur(2px);
+            padding: 10px;
+            margin-bottom: 25px;
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100vw;
+            position: relative;
+            height: 100vh;
+        }
+
+        .clock {
+            width: 100%;
+            max-width: 530px;
+            padding: 1em;
+            position: relative;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 10px 10px 0px 0px;
+            backdrop-filter: blur(1px);
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+        }
+
+        .row {
+            display: flex;
+            margin: 10px;
+            justify-content: space-between;
+        }
+
+        span {
+            font-family: "RalewayL", sans-serif;
+            font-weight: 200;
+            font-size: 2em;
+            opacity: 0.4;
+        }
+
+        footer {
+            font-family: RalewayL;
+            margin: 1em;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+
+        .ticking {
+            opacity: 1 !important;
+        }
+
+        .tickingb {
+            width: 530px;
+            height: 2px;
+            padding: 0px 1em;
+            background: rgba(228, 220, 220, 0.294);
+            position: relative;
+        }
+
+        .bar {
+            width: 10%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.288);
+            position: absolute;
+            left: 0%;
+            animation: keys 4s ease-in-out 100ms infinite;
+        }
+
+        @keyframes keys {
+            0% {
+                width: 5%;
+                left: 0px;
+            }
+
+            25% {
+                width: 20%;
+            }
+
+            50% {
+                width: 5%;
+                left: 95%;
+            }
+
+            75% {
+                width: 20%;
+            }
+
+            100% {
+                width: 5%;
+                left: 0px;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            span {
+                font-size: 1em;
+            }
+
+            .clock {
+                width: 60vw;
+            }
+
+            .title {
+                font-size: 1em;
+
+            }
+
+            .tickingb {
+                width: 60vw;
+                height: 1px;
+            }
+        }
+
+        @media screen and (max-width: 500px) {
+            span {
+                font-size: 1em;
+            }
+
+            .clock {
+                width: 80vw;
+            }
+
+            .title {
+                font-size: 1em;
+            }
+
+            .tickingb {
+                width: 80vw;
+                height: 1px;
+            }
+        }
+
+        @media screen and (max-width: 350px) {
+            span {
+                font-size: 1em;
+            }
+
+            .clock {
+                width: 90vw;
+            }
+
+            .title {
+                font-size: 1em;
+            }
+
+            .tickingb {
+                width: 90vw;
+                height: 1px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="title">
+            <h1>I</h1>
+            <h1>N</h1>
+            <h1>S</h1>
+            <h1>A</h1>
+            <h1>N</h1>
+            <h1>E</h1>
+            <h1></h1>
+            <h1>C</h1>
+            <h1>L</h1>
+            <h1>O</h1>
+            <h1>C</h1>
+            <h1>K</h1>
+        </div>
+        <div class="clock">
+            <div class="row">
+                <span>IT</span>
+                <span>IS</span>
+                <span>HALF</span>
+                <span class="ten">TEN</span>
+                <span>QUARTER</span>
+            </div>
+            <div class="row">
+                <span>TWENTY</span>
+                <span class="five">FIVE</span>
+                <span>PAST</span>
+                <span>MINUTES</span>
+            </div>
+            <div class="row">
+                <span>TO</span>
+                <span>ONE</span>
+                <span>TWO</span>
+                <span>THREE</span>
+                <span>FOUR</span>
+            </div>
+            <div class="row">
+                <span>FIVE</span>
+                <span>SIX</span>
+                <span>SEVEN</span>
+                <span>EIGHT</span>
+                <span>NINE</span>
+            </div>
+            <div class="row">
+                <span>TEN</span>
+                <span>ELEVEN</span>
+                <span>TWELVE</span>
+                <span>O'CLOCK</span>
+            </div>
+            <div class="row">
+                <span>IN</span>
+                <span>MORNING</span>
+                <span>EVENING</span>
+            </div>
+            <div class="row">
+                <span>AFTERNOON</span>
+                <span>NIGHT</span>
+                <span class="tick">TICKING</span>
+            </div>
+        </div>
+        <div class="tickingb">
+            <div class="bar"></div>
+        </div>
+        <footer> Since 2020<br> &copy; ZUBAIR-JAMIL
+        </footer>
+    </div>
+
+    <script>
+        // giving id to spans
+        var spans = document.getElementsByTagName("span");
+
+        for (let i = 0; i < spans.length; i++) {
+            const tbi = spans[i].innerHTML.toLowerCase();
+            spans[i].id = tbi;
+        }
+
+        //opacity on function
+        function ofn(a) {
+            document.getElementById(a).style.opacity = 1;
+        }
+
+        function ofc(b) {
+            document.getElementsByClassName(b)[0].style.opacity = 1;
+        }
+        document.getElementsByClassName("ten")[0].id = 0;
+        document.getElementsByClassName("five")[0].id = 0;
+
+        //main function
+
+        function clock() {
+            //opacity off
+            for (let i = 0; i < spans.length; i++) {
+                spans[i].style.opacity = 0.3;
+            }
+
+            document.getElementById("it").style.opacity = 1;
+            document.getElementById("is").style.opacity = 1;
+            document.getElementById("in").style.opacity = 1;
+
+            //varriables
+
+            var date = new Date();
+
+            //var ampm = date.getHours();
+            var ampm = date.getHours();
+            var h = date.getHours();
+
+            var min = date.getMinutes();
+
+
+            //AM_PM
+
+            if (ampm >= 0 && ampm < 12) {
+                ofn("morning");
+            } else if (ampm < 18 && ampm >= 12) {
+                ofn("afternoon");
+            } else if (ampm < 22 && ampm >= 18) {
+                ofn("evening");
+            } else if (ampm < 24 && ampm >= 22) {
+                ofn("night");
+            } else {
+                console.log("your clock is not ticking");
+            }
+
+            // fraction of hours
+
+            if (min >= 0 && min < 5) {
+                ofn("o'clock");
+            }
+            if (min >= 5 && min < 10) {
+                ofc("five");
+                ofn("past");
+            }
+            if (min >= 10 && min < 15) {
+                ofc("ten");
+                ofn("past");
+            }
+            if (min >= 15 && min < 20) {
+                ofn("quarter");
+            }
+            if (min >= 20 && min < 25) {
+                ofn("twenty");
+                ofn("past");
+            }
+            if (min >= 25 && min < 30) {
+                ofn("twenty");
+                ofc("five");
+                ofn("past");
+            }
+            if (min >= 30 && min < 35) {
+                ofn("half");
+                ofn("past");
+            }
+            if (min >= 35 && min < 40) {
+                ofn("twenty");
+                ofc("five");
+                ofn("to");
+            }
+            if (min >= 40 && min < 45) {
+                ofn("twenty");
+                ofn("to");
+            }
+            if (min >= 45 && min < 50) {
+                ofn("quarter");
+                ofn("to");
+            }
+            if (min >= 50 && min < 55) {
+                ofc("ten");
+                ofn("past");
+                ofn("to");
+            }
+            if (min >= 55 && min < 60) {
+                ofc("five");
+                ofn("past");
+                ofn("to");
+            }
+            if (min >= 60 && min < 5) {
+                ofn("o'clock");
+            }
+
+            // hours
+            if (document.getElementById("to").style.opacity == 1) {
+                switch (h) {
+                    case 1:
+                        h = "two";
+                        ofn(h);
+                        break;
+                    case 2:
+                        h = "three";
+                        ofn(h);
+                        break;
+                    case 3:
+                        h = "four";
+                        ofn(h);
+                        break;
+                    case 4:
+                        h = "five";
+                        ofn(h);
+                        break;
+                    case 5:
+                        h = "six";
+                        ofn(h);
+                        break;
+                    case 6:
+                        h = "seven";
+                        ofn(h);
+                        break;
+                    case 7:
+                        h = "eight";
+                        ofn(h);
+                        break;
+                    case 8:
+                        h = "nine";
+                        ofn(h);
+                        break;
+                    case 9:
+                        h = "ten";
+                        ofn(h);
+                        break;
+                    case 10:
+                        h = "eleven";
+                        ofn(h);
+                        break;
+                    case 11:
+                        h = "twelve";
+                        ofn(h);
+                        break;
+                    case 12:
+                        h = "one";
+                        ofn(h);
+                        break;
+                    case 13:
+                        h = "two";
+                        ofn(h);
+                        break;
+                    case 14:
+                        h = "three";
+                        ofn(h);
+                        break;
+                    case 15:
+                        h = "four";
+                        ofn(h);
+                        break;
+                    case 16:
+                        h = "five";
+                        ofn(h);
+                        break;
+                    case 17:
+                        h = "six";
+                        ofn(h);
+                        break;
+                    case 18:
+                        h = "seven";
+                        ofn(h);
+                        break;
+                    case 19:
+                        h = "eight";
+                        ofn(h);
+                        break;
+                    case 20:
+                        h = "nine";
+                        ofn(h);
+                        break;
+                    case 21:
+                        h = "ten";
+                        ofn(h);
+                        break;
+                    case 22:
+                        h = "eleven";
+                        ofn(h);
+                        break;
+                    case 23:
+                        h = "twelve";
+                        ofn(h);
+                        break;
+                    case 24:
+                        h = "one";
+                        ofn(h);
+                        break;
+                }
+            } else {
+                switch (h) {
+                    case 1:
+                        h = "one";
+                        ofn(h);
+                        break;
+                    case 2:
+                        h = "two";
+                        ofn(h);
+                        break;
+                    case 3:
+                        h = "three";
+                        ofn(h);
+                        break;
+                    case 4:
+                        h = "four";
+                        ofn(h);
+                        break;
+                    case 5:
+                        h = "five";
+                        ofn(h);
+                        break;
+                    case 6:
+                        h = "six";
+                        ofn(h);
+                        break;
+                    case 7:
+                        h = "seven";
+                        ofn(h);
+                        break;
+                    case 8:
+                        h = "eight";
+                        ofn(h);
+                        break;
+                    case 9:
+                        h = "nine";
+                        ofn(h);
+                        break;
+                    case 10:
+                        h = "ten";
+                        ofn(h);
+                        break;
+                    case 11:
+                        h = "eleven";
+                        ofn(h);
+                        break;
+                    case 12:
+                        h = "twelve";
+                        ofn(h);
+                        break;
+                    case 13:
+                        h = "one";
+                        ofn(h);
+                        break;
+                    case 14:
+                        h = "two";
+                        ofn(h);
+                        break;
+                    case 15:
+                        h = "three";
+                        ofn(h);
+                        break;
+                    case 16:
+                        h = "four";
+                        ofn(h);
+                        break;
+                    case 17:
+                        h = "five";
+                        ofn(h);
+                        break;
+                    case 18:
+                        h = "six";
+                        ofn(h);
+                        break;
+                    case 19:
+                        h = "seven";
+                        ofn(h);
+                        break;
+                    case 20:
+                        h = "eight";
+                        ofn(h);
+                        break;
+                    case 21:
+                        h = "nine";
+                        ofn(h);
+                        break;
+                    case 22:
+                        h = "ten";
+                        ofn(h);
+                        break;
+                    case 23:
+                        h = "eleven";
+                        ofn(h);
+                        break;
+                    case 24:
+                        h = "twelve";
+                        ofn(h);
+                        break;
+                }
+            }
+            //infinite repeater
+            setTimeout(clock, 1000);
+            document.getElementById("ticking").classList.toggle("ticking");
+        }
+
+        clock();
+    </script>
+</body>
+
+</html>
